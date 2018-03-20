@@ -1,0 +1,29 @@
+{
+    "name": "DBaas",
+    "version": "2.1.0",
+    "authors": [
+	"alex <alex_peng1986@hotmail.com>"
+  ],
+    "description": "RMS",
+    "main": "index.html",
+    "moduleType": [
+	"amd"
+  ],
+    "keywords": [
+	"DBaas"
+  ],
+    "ignore": [
+	"**/.*",
+	"node_modules",
+	"bower_components",
+	"test",
+	"tests"
+  ],
+    "dependencies": {
+    "admin-lte": "~2.4.3"
+    },
+    "overrides" : {
+    },
+    "resolutions": {
+    }
+}
