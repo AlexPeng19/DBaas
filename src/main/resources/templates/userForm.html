@@ -17,7 +17,7 @@
                 <strong>用户管理</strong>
             </legend>
 
-            <form th:action="@{/users/{action}(action=${action})}" method="post" class="form-horizontal">
+            <form th:action="@{/{action}(action=${action})}" method="post" class="form-horizontal">
 
                 <input type="hidden" name="id" th:value="${user.id}"/>
 
