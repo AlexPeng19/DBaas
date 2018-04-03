@@ -1,5 +1,5 @@
 {
-    "name": "DBaas",
+    "name": "esgyndbmgr",
     "version": "2.1.0",
     "authors": [
 	"alex <alex_peng1986@hotmail.com>"
@@ -10,7 +10,7 @@
 	"amd"
   ],
     "keywords": [
-	"DBaas"
+	"RMS"
   ],
     "ignore": [
 	"**/.*",
@@ -20,10 +20,19 @@
 	"tests"
   ],
     "dependencies": {
-    "admin-lte": "~2.4.3"
+    "admin-lte": "~2.4.3",
+    "text": "~2.0.14",
+    "backbone": "~1.3.3",
+    "requirejs": "~2.1.18",
+    "jquery.cookie": "~1.4.1",
+    "jquery-localize-i18n": "latest",
+    "bootstrap-table": "latest",
+    "eonasdan-bootstrap-datetimepicker": "4.17.47"
     },
     "overrides" : {
     },
     "resolutions": {
+        "jquery": "^3.2.1",
+        "font-awesome": "~4.6.3"
     }
 }

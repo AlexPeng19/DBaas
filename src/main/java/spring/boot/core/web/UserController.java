@@ -16,7 +16,7 @@ import spring.boot.core.service.UserService;
  * Created by bysocket on 24/07/2017.
  */
 @Controller
-@RequestMapping(value = "/users")     // 通过这里配置使下面的映射都在 /users
+@RequestMapping(value = "/")     // 通过这里配置使下面的映射都在 /users
 public class UserController {
 
     @Autowired
@@ -27,16 +27,11 @@ public class UserController {
      *    处理 "/users" 的 GET 请求，用来获取用户列表
      *    通过 @RequestParam 传递参数，进一步实现条件查询或者分页查询
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/users",method = RequestMethod.GET)
     public String getUserList(ModelMap map) {
         map.addAttribute("userList", userService.findAll());
         return "userList";
     }
-    @RequestMapping(value = "/blank",method = RequestMethod.GET)
-    public String getBlank(ModelMap map) {
-    	return "blank";
-    }
-
     /**
      * 显示创建用户表单
      *
@@ -46,6 +41,14 @@ public class UserController {
         map.addAttribute("user", new User());
         map.addAttribute("action", "create");
         return "userForm";
+    }
+    /**
+     * 显示创建用户表单
+     *
+     */
+    @RequestMapping(value = "/dashboard", method = RequestMethod.GET)
+    public String getDashboard(ModelMap map) {
+    	return "dashboard";
     }
 
     /**
